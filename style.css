@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+	padding: 0;
+    border: 0;
+    background-color:#f1ebe0; 
+    user-select: none;
+    font-family: Arial;
+}
+
+.left-block {
+    width: 30%;
+    height: 92%;
+    margin: 2vh .5% 1vh 1%;
+    padding: 1% 3%;
+    display: inline-block;
+    vertical-align: top;
+    background-color:#d88144; 
+}
+
+.game-settings {
+    margin: 0; 
+    border-spacing: 35px 20px; 
+    font-size: 20px;
+}
+
+.right-block {
+    width: 52%;
+    height: 92%;
+    margin: 2vh 1% 1vh .5%;
+    padding: 1% 4%;
+    display: inline-block;
+    vertical-align: top;
+    background-color:#ffc357; 
+}
+
+td {
+    user-select: none;
+    text-align: center;
+}
+
+.result-table {
+    margin: 0; 
+    font-size: 20px;
+}
+
+.result-table td {
+    border: 1px solid grey;
+}
+
+.arrow {
+    cursor: pointer;
+    color: #172b69;
+}
+
+.select-unit {
+    margin: 0 auto; 
+    border-spacing: 40px 20px; 
+    font-size: 40px
+}
+
+.button-fight {
+    display: block; 
+    width: 60%; 
+    margin: 20px auto;
+    padding: 10px 30px;
+    border: 2px solid #172b69; 
+    background-color: #172b69;
+    text-align: center;  
+    color: white; 
+    font-size: 20px; 
+    cursor: pointer;
+}
+
+.button-fight:hover {
+    background-color: white;
+    color: #172b69;
+}
+
+.button-fight:active, .button-fight:focus {
+    outline: none;
+}
+
+.right-block h3 {
+    margin-block-start: .8em;
+    margin-block-end: .8em;
+}
+
+.help {
+    width: 120px;
+    min-width: 90px;
+    background-color: #172b69;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}

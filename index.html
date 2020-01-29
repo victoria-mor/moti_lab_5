@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Лабораторная работа №5</title> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="left-block">
+		<h3>Настройка игры:</h3>
+		<table class="game-settings">
+			<tr>
+                <td></td>
+                <td>👼</td>
+                <td>😈</td>
+                <td>🙋</td>
+            </tr>
+			<tr>
+				<td>👼</td>
+				<td>
+					<span class="arrow" onClick="changeAttack(0,0,false)">◀</span>
+					<span id="attack_0_0"><span title="Ничья">🤕</span></span>
+					<span class="arrow" onClick="changeAttack(0,0,true)">▶</span>
+				</td>
+				<td>
+					<span class="arrow" onClick="changeAttack(0,1,false)">◀</span>
+					<span id="attack_0_1"><span title="Победа">🏆</span></span>
+					<span class="arrow" onClick="changeAttack(0,1,true)">▶</span>
+				</td>
+				<td>
+					<span class="arrow" onClick="changeAttack(0,2,false)">◀</span>
+					<span id="attack_0_2"><span title="Поражение">💀</span></span>
+					<span class="arrow" onClick="changeAttack(0,2,true)">▶</span>
+				</td>
+			</tr>
+			<tr>
+				<td>😈</td>
+				<td>
+					<span class="arrow" onClick="changeAttack(1,0,false)">◀</span>
+					<span id="attack_1_0"><span title="Поражение">💀</span></span>
+					<span class="arrow" onClick="changeAttack(1,0,true)">▶</span>
+				</td>
+				<td>
+					<span class="arrow" onClick="changeAttack(1,1,false)">◀</span>
+					<span id="attack_1_1"><span title="Ничья">🤕</span></span>
+					<span class="arrow" onClick="changeAttack(1,1,true)">▶</span>
+				</td>
+				<td>
+					<span class="arrow" onClick="changeAttack(1,2,false)">◀</span>
+					<span id="attack_1_2"><span title="Победа">🏆</span></span>
+					<span class="arrow" onClick="changeAttack(1,2,true)">▶</span>
+				</td>
+			</tr>
+			<tr>
+				<td>🙋</td>
+				<td>
+					<span class="arrow" onClick="changeAttack(2,0,false)">◀</span>
+					<span id="attack_2_0"><span title="Победа">🏆</span></span>
+					<span class="arrow" onClick="changeAttack(2,0,true)">▶</span>
+				</td>
+				<td>
+					<span class="arrow" onClick="changeAttack(2,1,false)">◀</span>
+					<span id="attack_2_1"><span title="Поражение">💀</span></span>
+					<span class="arrow" onClick="changeAttack(2,1,true)">▶</span>
+				</td>
+				<td>
+					<span class="arrow" onClick="changeAttack(2,2,false)">◀</span>
+					<span id="attack_2_2"><span title="Ничья">🤕</span></span>
+					<span class="arrow" onClick="changeAttack(2,2,true)">▶</span>
+				</td>
+			</tr>
+		</table>
+		<h3>Выберите свою команду:</h3>
+		<table class="select-unit">
+			<tr>
+				<td><span class="arrow" onClick="changeUnit(0,true)">▲</span></td>
+                <td><span class="arrow" onClick="changeUnit(1,true)">▲</span></td>
+            </tr>
+            <tr>
+                <td><span id="unit_0">👼</span></td>
+                <td><span id="unit_1">👼</span></td>
+            </tr>
+			<tr>
+				<td><span class="arrow" onClick="changeUnit(0,false)">▼</span></td>
+                <td><span class="arrow" onClick="changeUnit(1,false)">▼</span></td>
+            </tr>
+		</table>
+        <button class="button-fight" onClick="fight()">К бою!</button>
+    </div>
+    
+	<div class="right-block">
+		<h3>Платежная матрица:</h3>
+		<table class="result-table" id="main_table"></table>
+		<h4 style="margin-bottom:0;" id="status">Пророчат, что три враждующих стороны сойдутся в великой битве. Кто же победит?</h4>
+		<div style="width:45%; float:left;">
+			<h4 style="color:#172b69;">Всего: </h4>
+			<h3>Счет: <span id="score_all">0</span> <span id="last_score"></span></h3>
+			<h3>Проведено игр: <span id="games_all">0</span></h3>
+			<h3>Количество побед: <span id="win_all">0</span></h3>
+			<h3>Количество ничьих: <span id="draw_all">0</span></h3>
+			<h3>Количество поражений: <span id="lose_all">0</span></h3>
+		</div>
+		<div style="width:45%; float:left;">
+			<h4 style="color:#172b69;">С текущими настройками:</h4>
+			<h3>Счет: <span id="score">0</span> <span id="last_score_2"></span></h3>
+			<h3>Проведено игр: <span id="games">0</span></h3>
+			<h3>Количество побед: <span id="win">0</span></h3>
+			<h3>Количество ничьих: <span id="draw">0</span></h3>
+			<h3>Количество поражений: <span id="lose">0</span></h3>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
